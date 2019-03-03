@@ -84,7 +84,7 @@
 					"script": {
 						"id": "3f16d5c8-a7b3-42c3-87dd-2531f94f55df",
 						"exec": [
-							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+							"tests[\"Status code is 409\"] = responseCode.code === 409;"
 						],
 						"type": "text/javascript"
 					}
@@ -156,7 +156,7 @@
 					"script": {
 						"id": "553d6995-4bef-4f9c-9383-f5b042f0b78f",
 						"exec": [
-							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+							"tests[\"Status code is 409\"] = responseCode.code === 409;"
 						],
 						"type": "text/javascript"
 					}
@@ -233,7 +233,7 @@
 					"script": {
 						"id": "9dc0cc06-68cf-4611-981f-f6c887cdaa95",
 						"exec": [
-							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+							"tests[\"Status code is 409\"] = responseCode.code === 409;"
 						],
 						"type": "text/javascript"
 					}
@@ -316,7 +316,7 @@
 					"script": {
 						"id": "a4a0b0da-6de3-4847-9320-dcca033881fb",
 						"exec": [
-							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+							"tests[\"Status code is 409\"] = responseCode.code === 409;"
 						],
 						"type": "text/javascript"
 					}
