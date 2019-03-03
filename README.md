@@ -10,6 +10,7 @@
   <li >Descragar el proyecto </li>
   <li >hacer npm install </li>
   <li >hacer npm nodemo </li>
+  <li >hacer npm start </li>
   <li >abrir en un navegador con la url http://localhost:3000/</li>
   <li >las pruebas de postman se encuentran en las carpeta "pruebas de postman"</li>
 </ol>
