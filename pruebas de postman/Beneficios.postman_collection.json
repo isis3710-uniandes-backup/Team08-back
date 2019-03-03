@@ -7,6 +7,18 @@
 	"item": [
 		{
 			"name": "get benefits",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "13fbd2b2-3db1-42f1-bd4e-f17191d0f66c",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [
@@ -37,6 +49,18 @@
 		},
 		{
 			"name": "post benefit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fefa2876-231f-4ba6-ae8d-4dde60be9a14",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -67,6 +91,18 @@
 		},
 		{
 			"name": "get posted benefit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e78e56bc-6d50-442c-902c-e50d9e26024b",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -101,6 +137,18 @@
 		},
 		{
 			"name": "put benefit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "faa409bd-b860-4347-9ccd-4344dfc5f663",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -132,6 +180,18 @@
 		},
 		{
 			"name": "delete benefit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2fa098f3-c82b-4104-bbac-5ad375d5d30d",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [

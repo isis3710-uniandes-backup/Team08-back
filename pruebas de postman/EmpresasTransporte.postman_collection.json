@@ -7,6 +7,18 @@
 	"item": [
 		{
 			"name": "get transportation companies",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1fc7b692-dc2c-4a76-8fab-7196afeb47a5",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [
@@ -37,6 +49,18 @@
 		},
 		{
 			"name": "post transportation company",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e41e0c9c-3169-45b2-9861-7c77930bfd05",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -67,6 +91,18 @@
 		},
 		{
 			"name": "get posted company",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "50395bb0-e3e2-4260-951a-2ad791ec734b",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [
@@ -98,6 +134,18 @@
 		},
 		{
 			"name": "put transportation company",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "73dc5266-4a6b-4792-987c-fb0ec24d18dd",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -129,6 +177,18 @@
 		},
 		{
 			"name": "delete transportation company",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "71f0d9b5-3596-45f0-a033-f5b31283a63a",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [

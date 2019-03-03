@@ -7,6 +7,18 @@
 	"item": [
 		{
 			"name": "get evidences",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b9bc6b28-503a-4bcd-85b8-061ed27930eb",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [
@@ -37,6 +49,18 @@
 		},
 		{
 			"name": "post evidence",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e60c8511-0550-48b1-8880-1189fa0dda78",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -67,6 +91,18 @@
 		},
 		{
 			"name": "get posted evidence",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cbe2cb30-1e42-40d9-96a3-373b4035a159",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [
@@ -98,6 +134,18 @@
 		},
 		{
 			"name": "put evidence",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "73aba1d2-0dc8-41d4-b5be-93907709f12e",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -129,6 +177,18 @@
 		},
 		{
 			"name": "delete evidence",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ace7c2e5-9e18-42cb-a555-b00b24b6cfba",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [
