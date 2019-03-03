@@ -1,9 +1,9 @@
 # Team08-back
-<img src="">
+<img src="https://ssaenz11.github.io/images/donu.jpg">
 <h1>Descripción del proyecto Donu</h1>
 <p>Donu es una plataforma web que pretender facilitar el proceso de donaciones entre las personas y las ONG En esta plataforma pretendemos que tanto los usuario y las ong puedan decir los elementos que pueden donar y los que realmente necesitan. Existen también empresas que patrocinan las ONG y empresas de transporte que estarán encargadas de facilitar la transacción. Finalmente pueden observarse las evicencias de que se han hecho con las donaciones que se han dado.</p>
 <br>
-<img src="">
+<img src="https://api.genmymodel.com/projects/_K1b0oD05EemQWcstM2zleA/diagrams/_K1b0oz05EemQWcstM2zleA/svg">
 
 <h1>Instrucciones para correr el proyecto</h1>
 <ol>
