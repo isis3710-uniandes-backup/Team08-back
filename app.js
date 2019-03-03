@@ -11,6 +11,9 @@ var solicitudRouter= require('./routes/solicitud');
 var evidenceRouter= require('./routes/evidence');
 var benefitRouter= require('./routes/benefit');
 var transportationCompanyRouter= require('./routes/transportationCompany');
+var donantesRouter = require('./routes/donantes');
+var beneficiariosRouter = require('./routes/beneficiarios');
+var articulosRouter = require('./routes/articulos');
 
 var app = express();
 
@@ -31,6 +34,9 @@ app.use('/solicitud',solicitudRouter);
 app.use('/evidence',evidenceRouter);
 app.use('/transportationCompany',transportationCompanyRouter);
 app.use('/benefit',benefitRouter);
+app.use('/donantes',donantesRouter);
+app.use('/beneficiarios',beneficiariosRouter);
+app.use('/articulos',articulosRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

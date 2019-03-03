@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "58b327cc-aa25-4d7e-98ba-80b5bf1e4ad1",
+		"name": "Pruebas DONANTES",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET donantes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "865b9ca5-bd52-495e-bdc1-1f4def2724b8",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/donantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"donantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET donantes/id - caso: sirve",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/donantes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"donantes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET donantes/id - caso: NO sirve",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/donantes/130413",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"donantes",
+						"130413"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE donantes/id - caso: sirve",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/donantes/999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"donantes",
+						"999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE donantes/id - caso: NO sirve",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/donantes/10003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"donantes",
+						"10003"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST donantes - caso: sirve",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1004,\n\t\"nombre\":\"Sergio Llepez\",\n\t\"telefono\":\"519-684-3534\",\n\t\"correo\":\"sa.llepez0@cafepress.com\",\n\t\"genero\":\"Male\",\n\t\"edad\":18,\n\t\"direccion\":\"Subazar\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/donantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"donantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST donantes - caso: NO sirve",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1,\n\t\"nombre\":\"Sergio Llepez\",\n\t\"telefono\":\"519-684-3534\",\n\t\"correo\":\"sa.llepez0@cafepress.com\",\n\t\"genero\":\"Male\",\n\t\"edad\":18,\n\t\"direccion\":\"Subazar\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/donantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"donantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT donantes/id - caso: sirve",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1,\n\t\"nombre\":\"Sergio Yepes\",\n\t\"telefono\":\"519-684-3534\",\n\t\"correo\":\"sa.sadqfq@cafepress.com\",\n\t\"genero\":\"Male\",\n\t\"edad\":18,\n\t\"direccion\":\"Keneddy\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/donantes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"donantes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT donantes/id - caso: NO sirve",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":10003,\n\t\"nombre\":\"Sergio Yepes\",\n\t\"telefono\":\"519-684-3534\",\n\t\"correo\":\"sa.sadqfq@cafepress.com\",\n\t\"genero\":\"Male\",\n\t\"edad\":18,\n\t\"direccion\":\"Keneddy\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/donantes/10003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"donantes",
+						"10003"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

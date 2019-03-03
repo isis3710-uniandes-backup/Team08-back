@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "601a7048-d283-400a-81d5-630d36e2075c",
+		"name": "Pruebas ARTICULOS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET articulos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "865b9ca5-bd52-495e-bdc1-1f4def2724b8",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/articulos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articulos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET articulos/id - caso: sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "77087a08-55c4-408a-b05a-82e428bef3f5",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/articulos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articulos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET articulos/id - caso: NO sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3f16d5c8-a7b3-42c3-87dd-2531f94f55df",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/articulos/130413",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articulos",
+						"130413"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE articulos/id - caso: sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "79543862-aa2b-467a-b923-bf183305df6b",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/articulos/1005",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articulos",
+						"1005"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE articulos/id - caso: NO sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "553d6995-4bef-4f9c-9383-f5b042f0b78f",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/articulos/10003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articulos",
+						"10003"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST articulos- caso: sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4684598a-4ad0-42a9-a8e4-9eb5c7c08fdf",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1004,\n    \"nombre\": \"Truffle Shells - Semi - Sweet\",\n    \"descripcion\": \"Suspendisse accumsan tortor quis turpis. Sed ante.\",\n    \"imagen\": \"http://dummyimage.com/174x119.png/5fa2dd/ffffff\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/articulos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articulos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST articulos- caso: NO sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9dc0cc06-68cf-4611-981f-f6c887cdaa95",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"nombre\": \"Truffle Shells - Semi - Sweet\",\n    \"descripcion\": \"Suspendisse accumsan tortor quis turpis. Sed ante.\",\n    \"imagen\": \"http://dummyimage.com/174x119.png/5fa2dd/ffffff\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/articulos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articulos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT articulos/id - caso: sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e8735887-fc10-4dd8-9da6-c55a47b5095b",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"nombre\": \"Libro de la selva\",\n    \"descripcion\": \"Un libro muy interesante\",\n    \"imagen\": \"http://dummyimage.com/174x119.png/5fa2dd/ffffff\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/articulos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articulos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT articulos/id - caso: NO sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a4a0b0da-6de3-4847-9320-dcca033881fb",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 10003,\n    \"nombre\": \"Truffle Shells - Semi - Sweet\",\n    \"descripcion\": \"Suspendisse accumsan tortor quis turpis. Sed ante.\",\n    \"imagen\": \"http://dummyimage.com/174x119.png/5fa2dd/ffffff\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/articulos/10003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articulos",
+						"10003"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
