@@ -42,6 +42,18 @@
 		},
 		{
 			"name": "GET donantes/id - caso: sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f8f44b47-579f-4d42-a2e2-00c64f4dc7ea",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -66,6 +78,18 @@
 		},
 		{
 			"name": "GET donantes/id - caso: NO sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "691b2eb9-4109-4d5f-b439-a1a225639a53",
+						"exec": [
+							"tests[\"Status code is 409\"] = responseCode.code === 409;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -90,6 +114,18 @@
 		},
 		{
 			"name": "DELETE donantes/id - caso: sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d671cfa5-2888-4fa9-be14-b8d64e7bd0e5",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -114,6 +150,18 @@
 		},
 		{
 			"name": "DELETE donantes/id - caso: NO sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8f18f5a5-d04a-4e15-97cd-2caaa295acb1",
+						"exec": [
+							"tests[\"Status code is 409\"] = responseCode.code === 409;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -138,6 +186,18 @@
 		},
 		{
 			"name": "POST donantes - caso: sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "eb79644d-e537-4e3b-be80-e67b7f49fa51",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -149,7 +209,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"id\":1004,\n\t\"nombre\":\"Sergio Llepez\",\n\t\"telefono\":\"519-684-3534\",\n\t\"correo\":\"sa.llepez0@cafepress.com\",\n\t\"genero\":\"Male\",\n\t\"edad\":18,\n\t\"direccion\":\"Subazar\"\n}"
+					"raw": "{\n\t\"id\":1009,\n\t\"nombre\":\"Sergio Llepez\",\n\t\"telefono\":\"519-684-3534\",\n\t\"correo\":\"sa.llepez0@cafepress.com\",\n\t\"genero\":\"Male\",\n\t\"edad\":18,\n\t\"direccion\":\"Subazar\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:3000/donantes",
@@ -167,6 +227,18 @@
 		},
 		{
 			"name": "POST donantes - caso: NO sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5d045918-807e-4377-b098-ff2999c28b68",
+						"exec": [
+							"tests[\"Status code is 409\"] = responseCode.code === 409;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -196,6 +268,18 @@
 		},
 		{
 			"name": "PUT donantes/id - caso: sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e0cfc156-d683-4291-9865-52d82183bd95",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -226,6 +310,18 @@
 		},
 		{
 			"name": "PUT donantes/id - caso: NO sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5e1e59ed-ee3d-4f10-8d11-3cc201cc0992",
+						"exec": [
+							"tests[\"Status code is 409\"] = responseCode.code === 409;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "PUT",
 				"header": [

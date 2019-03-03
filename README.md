@@ -8,8 +8,8 @@
 <h1>Instrucciones para correr el proyecto</h1>
 <ol>
   <li >Descargar el proyecto </li>
-  <li >hacer npm install </li>
-  <li >hacer npm nodemo </li>
+  <li >hacer sudo npm install </li>
+  <li >hacer sudo npm install nodemon </li>
   <li >hacer npm start </li>
   <li >abrir en un navegador con la url http://localhost:3000/</li>
   <li >las pruebas de postman se encuentran en las carpeta "pruebas de postman"</li>
@@ -28,25 +28,36 @@
    <li >GET: http://localhost:3000/beneficiarios </li>
    <li >GET: http://localhost:3000/donantes </li>
    <li >GET: http://localhost:3000/articulos </li>
+   <li >GET: http://localhost:3000/benefit </li>
+   <li >GET: http://localhost:3000/transportationCompany </li>
+   <li >GET: http://localhost:3000/evidence </li>
    <li >POST: http://localhost:3000/solicitud </li>
    <li >POST: http://localhost:3000/ong </li>
    <li >POST: http://localhost:3000/sponsor </li>
    <li >POST: http://localhost:3000/beneficiarios </li>
    <li >POST: http://localhost:3000/donantes </li>
-   <li >POST: http://localhost:3000/articulos </li>
+  <li >POST: http://localhost:3000/articulos </li>
+   <li >POST: http://localhost:3000/benfit </li>
+   <li >POST: http://localhost:3000/transportationCompany </li>
+   <li >POST: http://localhost:3000/evidence </li>
    <li >PUT: http://localhost:3000/solicitud/17 </li>
    <li >PUT: http://localhost:3000/ong/17 </li>
    <li >PUT:http://localhost:3000/sponsor/17 </li>
    <li >PUT: http://localhost:3000/beneficiarios/15 </li>
    <li >PUT: http://localhost:3000/donantes/15 </li>
    <li >PUT: http://localhost:3000/articulos/13 </li>
+   <li >PUT: http://localhost:3000/benefit/5c7b3dd2006bf3210b17262f</li>
+   <li >PUT: http://localhost:3000/transportationCompany/5c7b3fc1ae475c2b34130e07 </li>
+   <li >PUT: http://localhost:3000/evidence/5c7b3aeef03b0526b19463cd</li>
    <li >DELETE:http://localhost:3000/solicitud/17 </li>
    <li >DELETE:http://localhost:3000/ong/17 </li>
    <li >DELETE:http://localhost:3000/sponsor/17 </li>
    <li >DELETE: http://localhost:3000/beneficiarios/998 </li>
    <li >DELETE: http://localhost:3000/donantes/998 </li>
    <li >DELETE: http://localhost:3000/articulos/998 </li>
- 
+   <li >DELETE: http://localhost:3000/benefit/5c7b3dd2006bf3210b17262f</li>
+   <li >DELETE: http://localhost:3000/transportationCompany/5c7b3fc1ae475c2b34130e07 </li>
+   <li >DELETE: http://localhost:3000/evidence/5c7b3aeef03b0526b19463cd</li>
  </ul>
 
 
