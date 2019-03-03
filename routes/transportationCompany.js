@@ -27,7 +27,7 @@ router.post('/', function(req, res, next) {
 });
 
 router.put('/:id', function(req, res, next) {
-    let id = parseInt(req.params.id);
+    let id = req.params.id;
     jsonfile.readFile('./persistence/transportationCompanies.json',(err,obj)=>{
         var ind=-1;
         let ids= obj.map((el,index)=>{
@@ -52,7 +52,7 @@ router.put('/:id', function(req, res, next) {
 });
 
 router.get('/:id', function(req, res, next) {
-    let id = parseInt(req.params.id);
+    let id = req.params.id;
     jsonfile.readFile('./persistence/transportationCompanies.json',(err,obj)=>{
         var ind=-1;
         let ids= obj.map((el,index)=>{
@@ -71,7 +71,7 @@ router.get('/:id', function(req, res, next) {
 });
 
 router.delete('/:id', function(req, res, next) {
-    let id = parseInt(req.params.id);
+    let id = req.params.id;
     jsonfile.readFile('./persistence/transportationCompanies.json',(err,obj)=>{
         var ind=-1;
         let ids= obj.map((el,index)=>{

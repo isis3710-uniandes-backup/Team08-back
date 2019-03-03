@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "e47e34f4-c3a1-4e26-885f-fc007a0e1a54",
+		"name": "Evidencias",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get evidences",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/evidence",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"evidence"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post evidence",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"5c7b4eab40a46dfdd4e8a29f\",\n    \"date\": \"2018-04-18T10:06:38 +05:00\",\n    \"description\": \"cillum elit dolor non voluptate laboris magna consectetur reprehenderit laborum\",\n    \"photos\": [\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\"\n    ],\n    \"tags\": [\n        \"tempor\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/evidence",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"evidence"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get posted evidence",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/evidence/5c7b4eab40a46dfdd4e8a29f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"evidence",
+						"5c7b4eab40a46dfdd4e8a29f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put evidence",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"5c7b4eab40a46dfdd4e8a29f\",\n    \"date\": \"2018-04-18T10:06:38 +05:00\",\n    \"description\": \"consectetur reprehenderit laborum\",\n    \"photos\": [\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\"\n    ],\n    \"tags\": [\n        \"tempor\",\n        \"modificado\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/evidence/5c7b4eab40a46dfdd4e8a29f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"evidence",
+						"5c7b4eab40a46dfdd4e8a29f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete evidence",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/evidence/5c7b4eab40a46dfdd4e8a29f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"evidence",
+						"5c7b4eab40a46dfdd4e8a29f"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
