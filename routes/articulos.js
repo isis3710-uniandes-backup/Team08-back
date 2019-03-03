@@ -13,6 +13,7 @@ router.post('/', function(req, res, next) {
     jsonfile.readFile('./persistence/articulos.json', (err, articulos) => {
         let ids = articulos.map(articulo => articulo.id);
         if (ids.includes(req.body.id)) {
+            res.statusCode=409;
             res.send('Ya existe un articulo con ID: ' + req.body.id);
         } else {
             articulos.push(req.body);
@@ -38,6 +39,7 @@ router.get('/:id', function(req, res, next) {
             res.send(obj[ind]);
         }
         else{
+            res.statusCode=409;
             res.send('No existe un articulo con ID: ' + id);
         }
     });
@@ -63,7 +65,7 @@ router.put('/:id', function(req, res, next) {
             res.send(obj[ind]);
         }
         else{
-            res.statusCode=404;
+            res.statusCode=409;
             res.send('No existe un articulo con ID: ' + id);
         }
     });
@@ -87,7 +89,7 @@ router.delete('/:id', function(req, res, next) {
             res.send(obj);
         }
         else{
-            res.statusCode=404;
+            res.statusCode=409;
             res.send('No existe un articulo con ID: ' + id);
         }
     });

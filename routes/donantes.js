@@ -13,6 +13,7 @@ router.post('/', function(req, res, next) {
     jsonfile.readFile('./persistence/donantes.json', (err, donantes) => {
         let ids = donantes.map(donante => donante.id);
         if (ids.includes(req.body.id)) {
+            res.statusCode=409;
             res.send('Ya existe un donante con ID: ' + req.body.id);
         } else {
             donantes.push(req.body);
@@ -38,6 +39,7 @@ router.get('/:id', function(req, res, next) {
             res.send(obj[ind]);
         }
         else{
+            res.statusCode=409;
             res.send('No existe un donante con ID: ' + id);
         }
     });
@@ -63,7 +65,7 @@ router.put('/:id', function(req, res, next) {
             res.send(obj[ind]);
         }
         else{
-            res.statusCode=404;
+            res.statusCode=409;
             res.send('No existe un donante con ID: ' + id);
         }
     });
@@ -87,7 +89,7 @@ router.delete('/:id', function(req, res, next) {
             res.send(obj);
         }
         else{
-            res.statusCode=404;
+            res.statusCode=409;
             res.send('No existe un donante con ID: ' + id);
         }
     });
