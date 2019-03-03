@@ -7,7 +7,7 @@
 
 <h1>Instrucciones para correr el proyecto</h1>
 <ol>
-  <li >Descragar el proyecto </li>
+  <li >Descargar el proyecto </li>
   <li >hacer npm install </li>
   <li >hacer npm nodemo </li>
   <li >hacer npm start </li>
@@ -25,15 +25,27 @@
   <li > GET: http://localhost:3000/solicitud</li>
    <li >GET: http://localhost:3000/ong </li>
    <li >GET: http://localhost:3000/sponsor </li>
+   <li >GET: http://localhost:3000/beneficiarios </li>
+   <li >GET: http://localhost:3000/donantes </li>
+   <li >GET: http://localhost:3000/articulos </li>
    <li >POST: http://localhost:3000/solicitud </li>
    <li >POST: http://localhost:3000/ong </li>
    <li >POST: http://localhost:3000/sponsor </li>
+   <li >POST: http://localhost:3000/beneficiarios </li>
+   <li >POST: http://localhost:3000/donantes </li>
+   <li >POST: http://localhost:3000/articulos </li>
    <li >PUT: http://localhost:3000/solicitud/17 </li>
    <li >PUT: http://localhost:3000/ong/17 </li>
    <li >PUT:http://localhost:3000/sponsor/17 </li>
-  <li >DELETE:http://localhost:3000/solicitud/17 </li>
-  <li >DELETE:http://localhost:3000/ong/17 </li>
-  <li >DELETE:http://localhost:3000/sponsor/17 </li>
+   <li >PUT: http://localhost:3000/beneficiarios/15 </li>
+   <li >PUT: http://localhost:3000/donantes/15 </li>
+   <li >PUT: http://localhost:3000/articulos/13 </li>
+   <li >DELETE:http://localhost:3000/solicitud/17 </li>
+   <li >DELETE:http://localhost:3000/ong/17 </li>
+   <li >DELETE:http://localhost:3000/sponsor/17 </li>
+   <li >DELETE: http://localhost:3000/beneficiarios/998 </li>
+   <li >DELETE: http://localhost:3000/donantes/998 </li>
+   <li >DELETE: http://localhost:3000/articulos/998 </li>
  
  </ul>
 
