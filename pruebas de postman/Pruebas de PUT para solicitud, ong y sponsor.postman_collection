@@ -1,0 +1,104 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Pruebas de PUT para solicitud, ong y sponsor",
+		"_postman_id": "50a6744e-f221-f25a-2e4e-9adf2e4aa231",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/sponsor/10",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/sponsor/10",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 10,\n    \"isActive\": false,\n    \"name\": \"Roxanne Odonnell\",\n    \"company\": \"SULTRAXIN\",\n    \"investment\": \"$3,148.65\",\n    \"address\": \"502 Morton Street, Yogaville, Maryland, 2065\",\n    \"registered\": \"<ReferenceError: moment is not defined>\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/ong/10",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/ong/10",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 10,\n    \"isActive\": false,\n    \"picture\": \"http://placehold.it/32x32\",\n    \"email\": \"lynnelloyd@fuelworks.com\",\n    \"phone\": \"+1 (951) 542-2461\",\n    \"address\": \"571 Norwood Avenue, Spelter, Georgia, 2553\",\n    \"about\": \"Culpa qui qui labore ea. Quis officia cillum ipsum dolore irure ad ex do nulla eu consequat tempor. Elit voluptate tempor quis esse tempor reprehenderit magna ea. Nostrud sint sunt in ut tempor pariatur amet exercitation deserunt magna. Non sunt id nostrud et esse commodo velit mollit quis quis.\\r\\n\",\n    \"registered\": \"2018-05-12T07:32:54 +05:00\",\n    \"latitude\": 1.059934,\n    \"longitude\": -115.998441\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/solicitud/10",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/solicitud/10",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 10,\n    \"isActive\": false,\n    \"cantidadConseguida\": 1,\n    \"cantidadFaltante\": 4,\n    \"fondos\": \"$1,670.30\",\n    \"picture\": \"http://placehold.it/32x32\",\n    \"about\": \"Exercitation mollit id nisi nisi ea dolor Lorem. Tempor esse qui aliqua reprehenderit magna amet qui tempor. Sunt cillum laborum nisi magna elit aute anim pariatur duis eiusmod voluptate officia veniam. Occaecat in Lorem proident ea cupidatat elit commodo. Esse labore occaecat nisi qui tempor consequat esse eu proident voluptate.\\r\\n\",\n    \"registered\": \"2016-06-06T09:41:15 +05:00\",\n    \"latitude\": 46.31064,\n    \"longitude\": -80.471378\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

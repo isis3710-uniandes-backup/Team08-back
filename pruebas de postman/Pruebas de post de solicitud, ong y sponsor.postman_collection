@@ -1,0 +1,352 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Pruebas de post de solicitud, ong y sponsor",
+		"_postman_id": "9425f48b-3eb1-67aa-746e-dbfca26c6364",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/solicitud",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/solicitud",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"isActive\": false,\n    \"cantidadConseguida\": 9,\n    \"cantidadFaltante\": 6,\n    \"fondos\": \"$1,533.33\",\n    \"picture\": \"http://placehold.it/32x32\",\n    \"about\": \"Commodo non exercitation pariatur anim dolore voluptate. Ex cupidatat anim do pariatur ad nisi ex ipsum. Ut officia non in dolor veniam amet amet id.\\r\\n\",\n    \"registered\": \"2015-09-08T05:01:49 +05:00\",\n    \"latitude\": 14.012841,\n    \"longitude\": -14.437207\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/solicitud",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/solicitud",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 3,\n    \"isActive\": false,\n    \"cantidadConseguida\": 10,\n    \"cantidadFaltante\": 0,\n    \"fondos\": \"$2,227.62\",\n    \"picture\": \"http://placehold.it/32x32\",\n    \"about\": \"Consectetur cupidatat sunt ex aliquip anim quis voluptate amet Lorem eiusmod exercitation laboris cupidatat minim. Nulla eu laborum non laborum laborum reprehenderit proident. Ad dolore eiusmod nisi minim tempor pariatur. Excepteur cupidatat cupidatat proident ullamco cupidatat. Nulla nostrud veniam id cupidatat anim excepteur eiusmod amet exercitation. Non ex ad non eu duis officia proident.\\r\\n\",\n    \"registered\": \"2016-05-18T07:31:32 +05:00\",\n    \"latitude\": 17.472942,\n    \"longitude\": -72.493818\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/solicitud",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/solicitud",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"isActive\": true,\n    \"cantidadConseguida\": 6,\n    \"cantidadFaltante\": 7,\n    \"fondos\": \"$3,883.96\",\n    \"picture\": \"http://placehold.it/32x32\",\n    \"about\": \"Anim exercitation proident sit voluptate amet pariatur quis Lorem dolore. Labore labore cillum tempor aliqua et ullamco culpa et quis. Nostrud voluptate consequat nisi ipsum consectetur tempor mollit magna elit. Do laborum do est consequat voluptate quis.\\r\\n\",\n    \"registered\": \"2018-02-08T05:48:33 +05:00\",\n    \"latitude\": -23.21372,\n    \"longitude\": -15.122815\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/solicitud",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/solicitud",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"isActive\": false,\n    \"cantidadConseguida\": 9,\n    \"cantidadFaltante\": 6,\n    \"fondos\": \"$1,533.33\",\n    \"picture\": \"http://placehold.it/32x32\",\n    \"about\": \"Commodo non exercitation pariatur anim dolore voluptate. Ex cupidatat anim do pariatur ad nisi ex ipsum. Ut officia non in dolor veniam amet amet id.\\r\\n\",\n    \"registered\": \"2015-09-08T05:01:49 +05:00\",\n    \"latitude\": 14.012841,\n    \"longitude\": -14.437207\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/ong",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/ong",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 0,\n    \"isActive\": false,\n    \"picture\": \"http://placehold.it/32x32\",\n    \"email\": \"lynnelloyd@fuelworks.com\",\n    \"phone\": \"+1 (805) 424-2313\",\n    \"address\": \"538 Hall Street, Mammoth, Palau, 3854\",\n    \"about\": \"Quis incididunt reprehenderit laboris velit qui ad consectetur ipsum voluptate eu velit duis. Voluptate officia ut consequat excepteur sunt ex aliquip sit. Dolore elit commodo eiusmod tempor aliquip quis. Aliquip quis magna duis eu ea voluptate nostrud id sunt consectetur cillum in. Ad cupidatat ea officia ut ut sint dolor eu adipisicing anim eiusmod irure. Amet sunt deserunt ex aliquip aliqua. Est enim duis deserunt tempor labore deserunt duis anim in quis laborum qui laboris.\\r\\n\",\n    \"registered\": \"2017-07-12T10:33:24 +05:00\",\n    \"latitude\": -45.180932,\n    \"longitude\": 133.086204\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/ong",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/ong",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"isActive\": true,\n    \"picture\": \"http://placehold.it/32x32\",\n    \"email\": \"lynnelloyd@fuelworks.com\",\n    \"phone\": \"+1 (908) 499-3307\",\n    \"address\": \"854 Hinsdale Street, Mayfair, Alabama, 4785\",\n    \"about\": \"Sunt elit et labore labore. Consectetur tempor anim aliquip dolore cupidatat nulla deserunt eu labore nulla laborum aliqua. Anim aliquip esse tempor elit officia consectetur ex labore culpa. Reprehenderit aute enim deserunt et irure do labore anim labore amet ea consectetur. Et ea anim do minim ipsum qui Lorem ut pariatur pariatur id. Nostrud nulla est eiusmod proident nostrud mollit irure. Voluptate aliqua velit consequat esse et incididunt adipisicing laboris ex magna consequat.\\r\\n\",\n    \"registered\": \"2019-03-01T01:24:37 +05:00\",\n    \"latitude\": 45.071456,\n    \"longitude\": 51.380351\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/ong",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/ong",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"isActive\": false,\n    \"picture\": \"http://placehold.it/32x32\",\n    \"email\": \"lynnelloyd@fuelworks.com\",\n    \"phone\": \"+1 (962) 588-3422\",\n    \"address\": \"296 Fillmore Place, Freeburn, Maryland, 6852\",\n    \"about\": \"Ex sint ad occaecat minim consequat. Veniam magna consectetur proident anim pariatur. In culpa enim veniam et ut qui sit sint nostrud do ex. Ut id voluptate nostrud amet enim et mollit proident laborum ad veniam voluptate ipsum.\\r\\n\",\n    \"registered\": \"2014-02-04T02:55:33 +05:00\",\n    \"latitude\": 29.029015,\n    \"longitude\": -24.477636\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/solicitud",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/solicitud",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"isActive\": false,\n    \"cantidadConseguida\": 9,\n    \"cantidadFaltante\": 6,\n    \"fondos\": \"$1,533.33\",\n    \"picture\": \"http://placehold.it/32x32\",\n    \"about\": \"Commodo non exercitation pariatur anim dolore voluptate. Ex cupidatat anim do pariatur ad nisi ex ipsum. Ut officia non in dolor veniam amet amet id.\\r\\n\",\n    \"registered\": \"2015-09-08T05:01:49 +05:00\",\n    \"latitude\": 14.012841,\n    \"longitude\": -14.437207\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/sponsor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/sponsor",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"isActive\": false,\n    \"name\": \"Eva Lawson\",\n    \"company\": \"OLUCORE\",\n    \"investment\": \"$2,006.82\",\n    \"address\": \"557 Ruby Street, Rossmore, District Of Columbia, 9745\",\n    \"registered\": \"<ReferenceError: moment is not defined>\"\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/sponsor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/sponsor",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"id\": 2,\n    \"isActive\": false,\n    \"name\": \"Ashlee Henderson\",\n    \"company\": \"HARMONEY\",\n    \"investment\": \"$1,707.07\",\n    \"address\": \"989 Wyona Street, Snyderville, Idaho, 9734\",\n    \"registered\": \"<ReferenceError: moment is not defined>\"\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/sponsor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/sponsor",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"id\": 3,\n    \"isActive\": true,\n    \"name\": \"Hutchinson Keith\",\n    \"company\": \"XURBAN\",\n    \"investment\": \"$3,161.62\",\n    \"address\": \"322 Grove Street, Carbonville, South Dakota, 6655\",\n    \"registered\": \"<ReferenceError: moment is not defined>\"\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
