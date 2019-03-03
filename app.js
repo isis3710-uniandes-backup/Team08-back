@@ -8,6 +8,9 @@ var indexRouter = require('./routes/index');
 var ongRouter= require('./routes/ong');
 var sponsorRouter= require('./routes/sponsor');
 var solicitudRouter= require('./routes/solicitud');
+var evidenceRouter= require('./routes/evidence');
+var benefitRouter= require('./routes/benefit');
+var transportationCompanyRouter= require('./routes/transportationCompany');
 
 var app = express();
 
@@ -25,6 +28,9 @@ app.use('/', indexRouter);
 app.use('/ong',ongRouter);
 app.use('/sponsor',sponsorRouter);
 app.use('/solicitud',solicitudRouter);
+app.use('/evidence',evidenceRouter);
+app.use('/transportationCompany',transportationCompanyRouter);
+app.use('/benefit',benefitRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
