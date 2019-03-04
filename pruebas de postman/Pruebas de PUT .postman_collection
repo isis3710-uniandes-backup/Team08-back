@@ -1,0 +1,323 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Pruebas de PUT ",
+		"_postman_id": "f5359342-378e-cba5-a5fe-40337f02b3ad",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PUT donantes/id - caso: sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/donantes/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1,\n\t\"nombre\":\"Sergio Yepes\",\n\t\"telefono\":\"519-684-3534\",\n\t\"correo\":\"sa.sadqfq@cafepress.com\",\n\t\"genero\":\"Male\",\n\t\"edad\":18,\n\t\"direccion\":\"Keneddy\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PUT beneficiarios/id - caso: sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/beneficiarios/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1,\n\t\"nombre\":\"Sergio Yepes\",\n\t\"telefono\":\"519-684-3534\",\n\t\"correo\":\"sa.sadqfq@cafepress.com\",\n\t\"genero\":\"Male\",\n\t\"edad\":18,\n\t\"direccion\":\"Keneddy\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PUT beneficiarios/id - caso: NO sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 409\"] = responseCode.code === 409;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/beneficiarios/10003",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":10003,\n\t\"nombre\":\"Sergio Yepes\",\n\t\"telefono\":\"519-684-3534\",\n\t\"correo\":\"sa.sadqfq@cafepress.com\",\n\t\"genero\":\"Male\",\n\t\"edad\":18,\n\t\"direccion\":\"Keneddy\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/sponsor/10",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/sponsor/10",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 10,\n    \"isActive\": false,\n    \"name\": \"Roxanne Odonnell\",\n    \"company\": \"SULTRAXIN\",\n    \"investment\": \"$3,148.65\",\n    \"address\": \"502 Morton Street, Yogaville, Maryland, 2065\",\n    \"registered\": \"<ReferenceError: moment is not defined>\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PUT donantes/id - caso: NO sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 409\"] = responseCode.code === 409;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/donantes/10003",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":10003,\n\t\"nombre\":\"Sergio Yepes\",\n\t\"telefono\":\"519-684-3534\",\n\t\"correo\":\"sa.sadqfq@cafepress.com\",\n\t\"genero\":\"Male\",\n\t\"edad\":18,\n\t\"direccion\":\"Keneddy\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "put benefit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/benefit/5c7c1c048edddbdfe36ce374",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"5c7c1c048edddbdfe36ce374\",\n    \"type\": \"descuento\",\n    \"name\": \"pariatur modificado\",\n    \"description\": \"fugiat officia in magna sit magna aute veniam ex fugiat\",\n    \"validFrom\": \"2018-03-27T09:54:25 +05:00\",\n    \"validThrough\": \"2019-02-21T08:45:37 +05:00\",\n    \"pointsValue\": 420,\n    \"stock\": 100\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/solicitud/10",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/solicitud/10",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 10,\n    \"isActive\": false,\n    \"cantidadConseguida\": 1,\n    \"cantidadFaltante\": 4,\n    \"fondos\": \"$1,670.30\",\n    \"picture\": \"http://placehold.it/32x32\",\n    \"about\": \"Exercitation mollit id nisi nisi ea dolor Lorem. Tempor esse qui aliqua reprehenderit magna amet qui tempor. Sunt cillum laborum nisi magna elit aute anim pariatur duis eiusmod voluptate officia veniam. Occaecat in Lorem proident ea cupidatat elit commodo. Esse labore occaecat nisi qui tempor consequat esse eu proident voluptate.\\r\\n\",\n    \"registered\": \"2016-06-06T09:41:15 +05:00\",\n    \"latitude\": 46.31064,\n    \"longitude\": -80.471378\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/ong/11",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/ong/11",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 11,\n    \"isActive\": false,\n    \"picture\": \"http://placehold.it/32x32\",\n    \"email\": \"lynnelloyd@fuelworks.com\",\n    \"phone\": \"+1 (884) 572-2678\",\n    \"address\": \"453 Harrison Avenue, Sehili, Utah, 4467\",\n    \"about\": \"Laborum aute duis proident pariatur. Mollit aute sit labore laboris. Consequat adipisicing pariatur excepteur labore.\\r\\n\",\n    \"registered\": \"2017-12-30T05:03:20 +05:00\",\n    \"latitude\": 87.429021,\n    \"longitude\": -143.980461\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PUT articulos/id - caso: sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/articulos/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"nombre\": \"Libro de la selva\",\n    \"descripcion\": \"Un libro muy interesante\",\n    \"imagen\": \"http://dummyimage.com/174x119.png/5fa2dd/ffffff\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "put evidence",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/evidence/5c7b4eab40a46dfdd4e8a29f",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"5c7b4eab40a46dfdd4e8a29f\",\n    \"date\": \"2018-04-18T10:06:38 +05:00\",\n    \"description\": \"consectetur reprehenderit laborum\",\n    \"photos\": [\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\"\n    ],\n    \"tags\": [\n        \"tempor\",\n        \"modificado\"\n    ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
