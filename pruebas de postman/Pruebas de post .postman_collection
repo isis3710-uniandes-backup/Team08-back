@@ -1,8 +1,8 @@
 {
 	"variables": [],
 	"info": {
-		"name": "Pruebas de post de solicitud, ong y sponsor",
-		"_postman_id": "9425f48b-3eb1-67aa-746e-dbfca26c6364",
+		"name": "Pruebas de post ",
+		"_postman_id": "4dec99e2-6287-d38c-f39f-2b811a5d87d9",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -33,6 +33,37 @@
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"id\": 2,\n    \"isActive\": false,\n    \"cantidadConseguida\": 9,\n    \"cantidadFaltante\": 6,\n    \"fondos\": \"$1,533.33\",\n    \"picture\": \"http://placehold.it/32x32\",\n    \"about\": \"Commodo non exercitation pariatur anim dolore voluptate. Ex cupidatat anim do pariatur ad nisi ex ipsum. Ut officia non in dolor veniam amet amet id.\\r\\n\",\n    \"registered\": \"2015-09-08T05:01:49 +05:00\",\n    \"latitude\": 14.012841,\n    \"longitude\": -14.437207\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/transportationCompany",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/transportationCompany",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": \"5c7b3fc14daf5057681054650000\",\n        \"company\": \"SPORTAN\",\n        \"email\": \"alejandrafrazier@sportan.com\",\n        \"phone\": \"+57 (995) 477-3161\",\n        \"address\": \"284 Vanderbilt Street, Sexton, California, 4417\",\n        \"about\": \"Et sit sunt velit veniam labore. Esse Lorem dolor cupidatat consectetur. Voluptate deserunt dolor Lorem ipsum occaecat minim ut. Officia et duis esse id reprehenderit aute tempor elit voluptate. Quis ad adipisicing cillum est pariatur occaecat est aute ad sint consectetur eu. Amet Lorem ea irure sunt veniam laboris eu.\\r\\n\",\n        \"logo\": \"http://placehold.it/32x32\",\n        \"isActive\": false\n    }"
 				},
 				"description": ""
 			},
@@ -318,6 +349,130 @@
 			"response": []
 		},
 		{
+			"name": "POST articulos- caso: NO sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 409\"] = responseCode.code === 409;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/articulos",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"nombre\": \"Truffle Shells - Semi - Sweet\",\n    \"descripcion\": \"Suspendisse accumsan tortor quis turpis. Sed ante.\",\n    \"imagen\": \"http://dummyimage.com/174x119.png/5fa2dd/ffffff\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST beneficiarios- caso: sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/beneficiarios",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1005,\n\t\"nombre\":\"Sergio Llepez\",\n\t\"telefono\":\"519-684-3534\",\n\t\"correo\":\"sa.llepez0@cafepress.com\",\n\t\"genero\":\"Male\",\n\t\"edad\":18,\n\t\"direccion\":\"Subazar\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST donantes - caso: sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/donantes",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1009,\n\t\"nombre\":\"Sergio Llepez\",\n\t\"telefono\":\"519-684-3534\",\n\t\"correo\":\"sa.llepez0@cafepress.com\",\n\t\"genero\":\"Male\",\n\t\"edad\":18,\n\t\"direccion\":\"Subazar\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST donantes - caso: NO sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 409\"] = responseCode.code === 409;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/donantes",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1,\n\t\"nombre\":\"Sergio Llepez\",\n\t\"telefono\":\"519-684-3534\",\n\t\"correo\":\"sa.llepez0@cafepress.com\",\n\t\"genero\":\"Male\",\n\t\"edad\":18,\n\t\"direccion\":\"Subazar\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
 			"name": "http://localhost:3000/sponsor",
 			"event": [
 				{
@@ -343,6 +498,101 @@
 				"body": {
 					"mode": "raw",
 					"raw": "  {\n    \"id\": 3,\n    \"isActive\": true,\n    \"name\": \"Hutchinson Keith\",\n    \"company\": \"XURBAN\",\n    \"investment\": \"$3,161.62\",\n    \"address\": \"322 Grove Street, Carbonville, South Dakota, 6655\",\n    \"registered\": \"<ReferenceError: moment is not defined>\"\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/articulos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/articulos",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 10010,\n        \"nombre\": \"Truffle Shells - Semi - Sweet\",\n        \"descripcion\": \"Suspendisse accumsan tortor quis turpis. Sed ante.\",\n        \"imagen\": \"http://dummyimage.com/174x119.png/5fa2dd/ffffff\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "post benefit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/benefit",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"5c7c1c048edddbdfe36ce374\",\n    \"type\": \"descuento\",\n    \"name\": \"pariatur\",\n    \"description\": \"fugiat officia in magna sit magna aute veniam ex fugiat\",\n    \"validFrom\": \"2018-03-27T09:54:25 +05:00\",\n    \"validThrough\": \"2019-02-21T08:45:37 +05:00\",\n    \"pointsValue\": 420,\n    \"stock\": 238\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "post evidence",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/evidence",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"5c7b4eab40a46dfdd4e8a29f\",\n    \"date\": \"2018-04-18T10:06:38 +05:00\",\n    \"description\": \"cillum elit dolor non voluptate laboris magna consectetur reprehenderit laborum\",\n    \"photos\": [\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\",\n        \"http://placehold.it/32x32\"\n    ],\n    \"tags\": [\n        \"tempor\"\n    ]\n}"
 				},
 				"description": ""
 			},

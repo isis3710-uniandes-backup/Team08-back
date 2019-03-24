@@ -1,0 +1,582 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Pruebas de Get y get id",
+		"_postman_id": "f37525ae-035b-ff7e-3d46-1472dec89b76",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/solicitud/15",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/solicitud/15",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/solicitud",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/solicitud",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n    \"id\": 3,\n    \"isActive\": false,\n    \"cantidadConseguida\": 10,\n    \"cantidadFaltante\": 0,\n    \"fondos\": \"$2,227.62\",\n    \"picture\": \"http://placehold.it/32x32\",\n    \"about\": \"Consectetur cupidatat sunt ex aliquip anim quis voluptate amet Lorem eiusmod exercitation laboris cupidatat minim. Nulla eu laborum non laborum laborum reprehenderit proident. Ad dolore eiusmod nisi minim tempor pariatur. Excepteur cupidatat cupidatat proident ullamco cupidatat. Nulla nostrud veniam id cupidatat anim excepteur eiusmod amet exercitation. Non ex ad non eu duis officia proident.\\r\\n\",\n    \"registered\": \"2016-05-18T07:31:32 +05:00\",\n    \"latitude\": 17.472942,\n    \"longitude\": -72.493818\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/ong",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/ong",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n    \"id\": 3,\n    \"isActive\": false,\n    \"cantidadConseguida\": 10,\n    \"cantidadFaltante\": 0,\n    \"fondos\": \"$2,227.62\",\n    \"picture\": \"http://placehold.it/32x32\",\n    \"about\": \"Consectetur cupidatat sunt ex aliquip anim quis voluptate amet Lorem eiusmod exercitation laboris cupidatat minim. Nulla eu laborum non laborum laborum reprehenderit proident. Ad dolore eiusmod nisi minim tempor pariatur. Excepteur cupidatat cupidatat proident ullamco cupidatat. Nulla nostrud veniam id cupidatat anim excepteur eiusmod amet exercitation. Non ex ad non eu duis officia proident.\\r\\n\",\n    \"registered\": \"2016-05-18T07:31:32 +05:00\",\n    \"latitude\": 17.472942,\n    \"longitude\": -72.493818\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/ong/14",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/ong/14",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n    \"id\": 3,\n    \"isActive\": false,\n    \"cantidadConseguida\": 10,\n    \"cantidadFaltante\": 0,\n    \"fondos\": \"$2,227.62\",\n    \"picture\": \"http://placehold.it/32x32\",\n    \"about\": \"Consectetur cupidatat sunt ex aliquip anim quis voluptate amet Lorem eiusmod exercitation laboris cupidatat minim. Nulla eu laborum non laborum laborum reprehenderit proident. Ad dolore eiusmod nisi minim tempor pariatur. Excepteur cupidatat cupidatat proident ullamco cupidatat. Nulla nostrud veniam id cupidatat anim excepteur eiusmod amet exercitation. Non ex ad non eu duis officia proident.\\r\\n\",\n    \"registered\": \"2016-05-18T07:31:32 +05:00\",\n    \"latitude\": 17.472942,\n    \"longitude\": -72.493818\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/sponsor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/sponsor",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n    \"id\": 3,\n    \"isActive\": false,\n    \"cantidadConseguida\": 10,\n    \"cantidadFaltante\": 0,\n    \"fondos\": \"$2,227.62\",\n    \"picture\": \"http://placehold.it/32x32\",\n    \"about\": \"Consectetur cupidatat sunt ex aliquip anim quis voluptate amet Lorem eiusmod exercitation laboris cupidatat minim. Nulla eu laborum non laborum laborum reprehenderit proident. Ad dolore eiusmod nisi minim tempor pariatur. Excepteur cupidatat cupidatat proident ullamco cupidatat. Nulla nostrud veniam id cupidatat anim excepteur eiusmod amet exercitation. Non ex ad non eu duis officia proident.\\r\\n\",\n    \"registered\": \"2016-05-18T07:31:32 +05:00\",\n    \"latitude\": 17.472942,\n    \"longitude\": -72.493818\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/sponsor/10",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/sponsor/10",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n    \"id\": 3,\n    \"isActive\": false,\n    \"cantidadConseguida\": 10,\n    \"cantidadFaltante\": 0,\n    \"fondos\": \"$2,227.62\",\n    \"picture\": \"http://placehold.it/32x32\",\n    \"about\": \"Consectetur cupidatat sunt ex aliquip anim quis voluptate amet Lorem eiusmod exercitation laboris cupidatat minim. Nulla eu laborum non laborum laborum reprehenderit proident. Ad dolore eiusmod nisi minim tempor pariatur. Excepteur cupidatat cupidatat proident ullamco cupidatat. Nulla nostrud veniam id cupidatat anim excepteur eiusmod amet exercitation. Non ex ad non eu duis officia proident.\\r\\n\",\n    \"registered\": \"2016-05-18T07:31:32 +05:00\",\n    \"latitude\": 17.472942,\n    \"longitude\": -72.493818\n  }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET donantes/id - caso: sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/donantes/1",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get posted benefit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/benefit/5c7c1c048edddbdfe36ce374",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"5c7c1c048edddbdfe36ce374\",\n    \"type\": \"descuento\",\n    \"name\": \"pariatur\",\n    \"description\": \"fugiat officia in magna sit magna aute veniam ex fugiat\",\n    \"validFrom\": \"2018-03-27T09:54:25 +05:00\",\n    \"validThrough\": \"2019-02-21T08:45:37 +05:00\",\n    \"pointsValue\": 420,\n    \"stock\": 238\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get benefits",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/benefit",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET beneficiarios",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/beneficiarios",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET beneficiarios/id - caso: sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/beneficiarios/1",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET articulos/id - caso: sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/articulos/1",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET articulos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/articulos",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET articulos/id - caso: NO sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 409\"] = responseCode.code === 409;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/articulos/130413",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET donantes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/donantes",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET donantes/id - caso: NO sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 409\"] = responseCode.code === 409;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/donantes/130413",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get posted company",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/transportationCompany/5c7c086261640229abd7e92a",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get transportation companies",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/transportationCompany",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET beneficiarios/id - caso: NO sirve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 409\"] = responseCode.code === 409;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/beneficiarios/130413",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get evidences",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:3000/evidence",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
