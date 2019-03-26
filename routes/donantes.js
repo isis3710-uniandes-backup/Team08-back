@@ -10,12 +10,14 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
+    console.log(req.body)
     jsonfile.readFile('./persistence/donantes.json', (err, donantes) => {
         let ids = donantes.map(donante => donante.id);
         if (ids.includes(req.body.id)) {
             res.statusCode=409;
             res.send('Ya existe un donante con ID: ' + req.body.id);
         } else {
+
             donantes.push(req.body);
             jsonfile.writeFile('./persistence/donantes.json', donantes, function(err) {
                 if (err) throw err;
