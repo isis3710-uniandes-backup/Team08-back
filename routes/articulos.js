@@ -1,16 +1,17 @@
 var express = require('express');
 var router = express.Router();
 var jsonfile = require('jsonfile');
+var middleware = require("../middleware.js");
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/', middleware.checkToken, function(req, res, next) {
+    console.log('erer')
     jsonfile.readFile('./persistence/articulos.json', (err, obj) => {
-        console.log(obj)
         res.send(obj);
     });
 });
 
-router.post('/', function(req, res, next) {
+router.post('/', middleware.checkToken,function(req, res, next) {
     jsonfile.readFile('./persistence/articulos.json', (err, articulos) => {
         let ids = articulos.map(articulo => articulo.id);
         if (ids.includes(req.body.id)) {
@@ -26,7 +27,7 @@ router.post('/', function(req, res, next) {
     });
 });
 
-router.get('/:id', function(req, res, next) {
+router.get('/:id', middleware.checkToken,function(req, res, next) {
     let id = parseInt(req.params.id);
     jsonfile.readFile('./persistence/articulos.json',(err,obj)=>{
         var ind=-1;
@@ -47,7 +48,7 @@ router.get('/:id', function(req, res, next) {
 });
 
 
-router.put('/:id', function(req, res, next) {
+router.put('/:id', middleware.checkToken,function(req, res, next) {
     let id = parseInt(req.params.id);
     jsonfile.readFile('./persistence/articulos.json',(err,obj)=>{
         var ind=-1;
@@ -72,7 +73,7 @@ router.put('/:id', function(req, res, next) {
     });
 });
 
-router.delete('/:id', function(req, res, next) {
+router.delete('/:id', middleware.checkToken,function(req, res, next) {
     let id = parseInt(req.params.id);
     jsonfile.readFile('./persistence/articulos.json',(err,obj)=>{
         var ind=-1;

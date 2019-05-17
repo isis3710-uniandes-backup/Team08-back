@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
+var jwtRouter = require('./routes/jwt');
 var ongRouter= require('./routes/ong');
 var sponsorRouter= require('./routes/sponsor');
 var solicitudRouter= require('./routes/solicitud');
@@ -28,6 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/jwt', jwtRouter);
 app.use('/ong',ongRouter);
 app.use('/sponsor',sponsorRouter);
 app.use('/solicitud',solicitudRouter);
