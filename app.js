@@ -15,13 +15,15 @@ var transportationCompanyRouter= require('./routes/transportationCompany');
 var donantesRouter = require('./routes/donantes');
 var beneficiariosRouter = require('./routes/beneficiarios');
 var articulosRouter = require('./routes/articulos');
+var cors = require('cors');
+
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'front/build'));
 app.set('view engine', 'pug');
-
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
