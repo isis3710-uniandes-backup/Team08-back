@@ -3,6 +3,7 @@ const config = require( './config.js' );
 
 // Función encargada de realizar la validación del token y que es directamente consumida por server.js
 let checkToken = ( req, res, next ) => {
+  res.header("Access-Control-Allow-Origin", "*");
   // Extrae el token de la solicitud enviado a través de cualquiera de los dos headers especificados
   // Los headers son automáticamente convertidos a lowercase
   let token = req.headers[ 'x-access-token' ] || req.headers[ 'authorization' ];

@@ -10,6 +10,7 @@ router.get('/', middleware.checkToken,HandlerGenerator.index);
 router.post('/login',HandlerGenerator.login);
 
 router.get('/donantes',middleware.checkToken,function(req,res){
+	res.header("Access-Control-Allow-Origin", "*");
 	jsonfile.readFile('./persistence/donantes.json', (err, donantes) => {
         res.json(donantes);
     });

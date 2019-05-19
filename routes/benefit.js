@@ -6,6 +6,7 @@ var middleware = require("../middleware.js");
 
 /* GET users listing. */
 router.get('/', middleware.checkToken,function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
     jsonfile.readFile('./persistence/benefits.json',(err,obj)=>{
         res.send(obj);
     });
@@ -28,6 +29,7 @@ router.post('/', middleware.checkToken,function(req, res, next) {
 });
 
 router.put('/:id', middleware.checkToken,function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
     let id = req.params.id;
     jsonfile.readFile('./persistence/benefits.json',(err,obj)=>{
         var ind=-1;
@@ -53,6 +55,7 @@ router.put('/:id', middleware.checkToken,function(req, res, next) {
 });
 
 router.get('/:id', middleware.checkToken,function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
     let id = req.params.id;
     jsonfile.readFile('./persistence/benefits.json',(err,obj)=>{
         var ind=-1;
@@ -72,6 +75,7 @@ router.get('/:id', middleware.checkToken,function(req, res, next) {
 });
 
 router.delete('/:id', middleware.checkToken,function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
     let id = req.params.id;
     jsonfile.readFile('./persistence/benefits.json',(err,obj)=>{
         var ind=-1;

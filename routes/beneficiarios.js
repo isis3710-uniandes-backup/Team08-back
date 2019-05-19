@@ -5,12 +5,14 @@ var jsonfile = require('jsonfile');
 var middleware = require("../middleware.js");
 /* GET users listing. */
 router.get('/', middleware.checkToken,function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
     jsonfile.readFile('./persistence/beneficiarios.json', (err, obj) => {
         res.send(obj);
     });
 });
 
 router.post('/', middleware.checkToken,function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
     jsonfile.readFile('./persistence/beneficiarios.json', (err, beneficiarios) => {
         let ids = beneficiarios.map(beneficiario => beneficiario.id);
         if (ids.includes(req.body.id)) {
@@ -27,6 +29,7 @@ router.post('/', middleware.checkToken,function(req, res, next) {
 });
 
 router.get('/:id', middleware.checkToken,function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
     let id = parseInt(req.params.id);
     jsonfile.readFile('./persistence/beneficiarios.json',(err,obj)=>{
         var ind=-1;
@@ -48,6 +51,7 @@ router.get('/:id', middleware.checkToken,function(req, res, next) {
 
 
 router.put('/:id', middleware.checkToken,function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
     let id = parseInt(req.params.id);
     jsonfile.readFile('./persistence/beneficiarios.json',(err,obj)=>{
         var ind=-1;
@@ -73,6 +77,7 @@ router.put('/:id', middleware.checkToken,function(req, res, next) {
 });
 
 router.delete('/:id', middleware.checkToken,function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
     let id = parseInt(req.params.id);
     jsonfile.readFile('./persistence/beneficiarios.json',(err,obj)=>{
         var ind=-1;

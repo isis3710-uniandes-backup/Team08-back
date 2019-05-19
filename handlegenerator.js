@@ -5,7 +5,8 @@ var jsonfile = require('jsonfile');
 // Clase encargada de la creación del token
 class HandlerGenerator {
 
-  sign_up(req,res){
+  sign_up(req,res){res.header("Access-Control-Allow-Origin", "*");
+
     let username = req.body.username;
     let password = req.body.password;
 
@@ -35,6 +36,7 @@ class HandlerGenerator {
   }
 
   login( req, res ) {
+    res.header("Access-Control-Allow-Origin", "*");
     
     // Extrae el usuario y la contraseña especificados en el cuerpo de la solicitud
     let username = req.body.username;
@@ -67,6 +69,7 @@ class HandlerGenerator {
   }
 
   index( req, res ) {
+    res.header("Access-Control-Allow-Origin", "*");
     res.json({
       success: true,
       message: 'Index page'

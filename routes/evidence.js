@@ -6,12 +6,14 @@ var jsonfile = require('jsonfile');
 
 /* GET users listing. */
 router.get('/', middleware.checkToken,function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
     jsonfile.readFile('./persistence/evidences.json',(err,obj)=>{
         res.send(obj);
     });
 });
 
 router.post('/', middleware.checkToken,function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
     jsonfile.readFile('./persistence/evidences.json',(err,obj)=>{
         let ids= obj.map(el=>el.id);
         if(ids.includes(req.body.id)){
@@ -28,6 +30,7 @@ router.post('/', middleware.checkToken,function(req, res, next) {
 });
 
 router.put('/:id', middleware.checkToken,function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
     let id = req.params.id;
     jsonfile.readFile('./persistence/evidences.json',(err,obj)=>{
         var ind=-1;
@@ -53,6 +56,7 @@ router.put('/:id', middleware.checkToken,function(req, res, next) {
 });
 
 router.get('/:id', middleware.checkToken,function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
     let id = req.params.id;
     jsonfile.readFile('./persistence/evidences.json',(err,obj)=>{
         var ind=-1;
@@ -72,6 +76,7 @@ router.get('/:id', middleware.checkToken,function(req, res, next) {
 });
 
 router.delete('/:id',middleware.checkToken, function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
     let id = req.params.id;
     jsonfile.readFile('./persistence/evidences.json',(err,obj)=>{
         var ind=-1;
